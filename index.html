@@ -7,9 +7,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.2.1/mocha.min.css" integrity="sha512-6RWs5FczsXwODIZJoL0szz3bXX5W+q/m7bFVQ7HSwZbBXd7PpyYrg2f9Dr4Y2Guqi5k4NJsemxXuiiFoI8fQ4A==" crossorigin="anonymous" />
 </head>
 <body>
-    Testing.
+    <div id="mocha"></div>>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/expect.js/0.3.1/index.min.js" integrity="sha512-tePhugGU0pXFrHFy3oJbA5xnoDg++MNKr5tbA6PLY28DirXCQXLwLiF4Y/U757UVHtJNwfrjhN88h0e13oZVuQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.min.js" integrity="sha512-x3BwhuxT44pOQZanacQyDnrB2r1L1AUfjUaefYArTHR9sHEvvy3NSnnm5Z7GAl5YPc3+GEWFT0S34obDSzUvaQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.2.1/mocha.min.js"></script>
+
+    <script src="problems.js"></script>
+    <script>
+        const mocha = window.mocha;
+        mocha.setup('bdd');
+    </script>
+    <script src="tests.js"></script>
+    <script>
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
 </body>
 </html>
